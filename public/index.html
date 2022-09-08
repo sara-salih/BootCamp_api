@@ -14,13 +14,23 @@
         sentence: '',
         longestWord:'',
         shortestWord:'',
-        wordCount:'',
+        wordLengths:'',
         phoneBill:'',
+        remaining:'',
+        usage:'',
+        amount:'',
+
         totalPhoneBill:'',
         checkBill(){
             axios.get(`/api/total_bill?phoneBill=${this.phoneBill} `)
             .then((result)=>{
                 this.totalPhoneBill= result.data.totalPhoneBill
+            })
+        },
+        checkBalance(){
+            axios.get(`/api/enough?usage=${this.usage}&amount=${this.amount}`)
+            .then((result)=>{
+                this.remaining = result.data.enoughAirtime
             })
         },
 
@@ -29,7 +39,7 @@
             .then((result)=>{
                this.longestWord = result.data.longestWord;
                this.shortestWord = result.data.shortestWord;
-               this.wordCount = result.data.wordCount;
+               this.wordLengths = result.data.wordLengths;
             });
         }
     }">
@@ -53,7 +63,7 @@
         </div>
 
         <div>
-            Words Length: <span x-text="wordCount"></span>
+            Words Length: <span x-text="wordLengths"></span>
         </div>
     </div>
     </div>
@@ -68,7 +78,17 @@
        Total Phone Bill: <span x-text="totalPhoneBill"></span>
     </div>
     </div>
+
+    <h2>Enough Airtime</h2>
+    <textarea x-model="usage" name="" id="" cols="30" rows="5"></textarea><br>
+    <textarea x-model="amount" name="" id="" cols="20" rows="5"></textarea>
+    <div>
+        <button @click="checkBalance">balance</button>
+    </div>
+    <div>
+        Remaining: <span x-text="remaining"></span>
+     </div>
     </div>
    
 </body>
-</html>
+</html
