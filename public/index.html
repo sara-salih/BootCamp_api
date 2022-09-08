@@ -8,6 +8,12 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="//unpkg.com/alpinejs" defer></script>
+
+    <style>
+        body{
+            background-color: aqua;
+        }
+    </style>
 </head>
 <body>
     <div x-data="{
@@ -47,7 +53,7 @@
     <div>
     <div>
         <h2>Word Game</h2>
-        <textarea x-model="sentence" name="" id="" cols="30" rows="5"></textarea>
+        <textarea x-model="sentence" name="" id="" cols="30" rows="3"></textarea>
         <div>
             <button @click="checkSentence">check</button>
         </div>
@@ -70,7 +76,7 @@
     <div>
         <h2>Total Phone Bill</h2>
     
-        <textarea x-model="phoneBill" name="" id="" cols="30" rows="5"></textarea>
+        <textarea x-model="phoneBill" name="" id="" cols="30" rows="3"></textarea>
         <div>
             <button @click="checkBill">bill</button>
         </div>
@@ -80,8 +86,8 @@
     </div>
 
     <h2>Enough Airtime</h2>
-    <textarea x-model="usage" name="" id="" cols="30" rows="5"></textarea><br>
-    <textarea x-model="amount" name="" id="" cols="20" rows="5"></textarea>
+    <textarea x-model="usage" name="" id="" cols="30" rows="3"></textarea><br>
+    <textarea x-model="amount" name="" id="" cols="5" rows="2"></textarea>
     <div>
         <button @click="checkBalance">balance</button>
     </div>

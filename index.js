@@ -4,7 +4,7 @@ import longestWord from './bootcamp test/longestword.js';
 import shortestWord from './bootcamp test/shortestWord.js';
 import totalPhoneBill from './bootcamp test/totalPhoneBill.js';
 import enoughAirtime from './bootcamp test/enoughAirtime.js';
-import wordLengths from './bootcamp test/wordLengths';
+import wordLengths from './bootcamp test/wordLengths.js';
 const app = express();
 
 app.use(express.static('public'))
