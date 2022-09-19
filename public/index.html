@@ -11,7 +11,7 @@
 
     <style>
         body{
-            background-color: aqua;
+            background-color: rgb(200, 255, 0);
         }
     </style>
 </head>
@@ -74,14 +74,14 @@
     </div>
     </div>
     <div>
-        <h2>Total Phone Bill</h2>
+        <h2>Total Bill</h2>
     
         <textarea x-model="phoneBill" name="" id="" cols="30" rows="3"></textarea>
         <div>
-            <button @click="checkBill">bill</button>
+            <button @click="checkBill">checkBill</button>
         </div>
     <div>
-       Total Phone Bill: <span x-text="totalPhoneBill"></span>
+       Total Bill: <span x-text="totalPhoneBill"></span>
     </div>
     </div>
 
@@ -89,10 +89,10 @@
     <textarea x-model="usage" name="" id="" cols="30" rows="3"></textarea><br>
     <textarea x-model="amount" name="" id="" cols="5" rows="2"></textarea>
     <div>
-        <button @click="checkBalance">balance</button>
+        <button @click="checkBalance">Your balance</button>
     </div>
     <div>
-        Remaining: <span x-text="remaining"></span>
+        Left: <span x-text="remaining"></span>
      </div>
     </div>
    
